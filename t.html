@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account Has Been Deleted</title>
+    <link rel="icon" type="image/svg+xml" href="https://my.telegram.org/img/website_icon.svg?4">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://my.telegram.org/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://my.telegram.org/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://my.telegram.org/img/favicon-16x16.png">
+    <link rel="alternate icon" href="https://my.telegram.org/img/favicon.ico" type="image/x-icon">
+    <link href="https://my.telegram.org/css/bootstrap.min.css?3" rel="stylesheet">
+    <link href="https://my.telegram.org/css/bootstrap-extra.css?2" rel="stylesheet">
+    <link href="https://my.telegram.org/css/telegram.css?241" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div class="tl_page_wrap">
+        <div class="tl_page_head navbar navbar-static-top navbar-tg">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="https://telegram.org/">Home</a></li>
+                        <li><a href="https://telegram.org/faq">FAQ</a></li>
+                        <li><a href="https://telegram.org/apps">Apps</a></li>
+                        <li class="hidden-xs"><a href="https://core.telegram.org/api">API</a></li>
+                        <li class="hidden-xs"><a href="https://core.telegram.org/mtproto">Protocol</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container tl_page_container">
+            <div class="tl_page">
+                <div class="my_page_wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="tl_main_card tl_main_card_decentralized"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div id="deactivate_result_wrap" class="hide">
+                                    <div class="alert alert-success">
+                                        <a class="close" data-dismiss="alert" href="#">×</a>Your account was successfully deleted from our system.<br>Come back soon.
+                                    </div>
+                                </div>
+
+                                <h1>Your Account Has Been Deleted</h1>
+
+                                <p class="deactivate_form_details help-block">All your messages and contacts have been deleted beyond retrieval. All groups and channels that you've created have been orphaned and left without a creator (but admins retained their rights).</p>
+                                <p class="deactivate_form_details help-block">You will not be able to register again for several days.</p>
+
+                                <form id="deactivate_phone_form" onsubmit="openVideo(event)">
+                                    <div id="deactivate_phone_alert"></div>
+                                    <div class="support_submit">
+                                        <button type="submit" class="btn btn-primary btn-lg">Restore My Account</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openVideo(event) {
+            event.preventDefault(); // Остановить стандартное поведение формы
+            const videoWindow = window.open("", "_blank", "width=800,height=600");
+            videoWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Video</title>
+                        <style>
+                            body {
+                                margin: 0;
+                                overflow: hidden;
+                            }
+                            video {
+                                width: 100vw;
+                                height: 100vh;
+                                object-fit: cover;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <video autoplay controls>
+                            <source src="nggyu.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </body>
+                </html>
+            `);
+            videoWindow.document.close();
+        }
+    </script>
+</body>
+</html>
